@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {          
+    margin: 0; /* css reset*/
+    padding: 0; /* css reset*/
+}
+
+.baggrundsbillede{
+  height: 100%;
+  background-size: cover;
+}
+.baggrund-first{
+    background-size: cover;
+}
+
+.navbar {       
+    display: flex;  
+    justify-content: space-between; 
+    align-items: center;
+    color: black; 
+}
+
+.tittel {
+    font-weight: bold; 
+    font-size: 2rem;
+    margin: .5rem; 
+    padding-left: .7rem; 
+}
+
+.navbar-content {
+    height: 100%; 
+}
+
+.navbar-content ul {
+    display: flex; 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-content li {
+    list-style: none; 
+}
+
+.navbar-content li a { 
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1.5rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+ul li a:hover{
+    text-decoration: underline;
+}
+
+
+.navbar-content li:hover {  
+    background-color: rgb(93, 159, 235);
+}
+
+.toggle-button {  
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {  
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {  /* Når broswervinduet er 620px eller mindre sker følgende:*/
+
+    .navbar {                      
+        flex-direction: column;   
+        align-items: flex-start;   
+    }
+
+    .toggle-button {
+        display: flex; 
+    }
+
+    .navbar-content {   
+        display: none; 
+        width: 100%;
+    }
+
+    .navbar-content ul {   
+        width: 100%;
+        flex-direction: column; 
+        background-color: #333;
+    }
+
+    .navbar-content ul li:hover{
+        background-color: rgb(93, 159, 235);
+    }
+
+    ul li a:hover{
+        text-decoration: none;
+    }
+
+    .navbar-content ul li {
+        text-align: center; 
+    }
+
+    .navbar-content ul li a {   
+        padding: .5rem 1rem;    
+    }
+
+    .navbar-content.active {   
+        display: flex;       /* Der laves en active class som kan bruges i det simple javascript*/
+    }   
+}
